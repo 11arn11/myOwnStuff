@@ -8,7 +8,7 @@ import ScheduledDay from "./ScheduledDay";
 import SelectMealDialog from "./SelectMealDialog";
 
 import { getDaysBetweenDates } from "../Utils";
-import { scheduledMeals } from "../data";
+import { scheduledMeals } from "../data/scheduledMeals";
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({

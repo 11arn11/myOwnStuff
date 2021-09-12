@@ -10,6 +10,8 @@ import Avatar from "@material-ui/core/Avatar";
 
 import { getIconMealType } from "../Utils";
 
+import { recipes } from "../data/recipes";
+
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
@@ -18,15 +20,22 @@ const useStyles = makeStyles((theme: Theme) =>
   })
 );
 
-export default ({ meal: { mealType, recipeLabel } }) => {
+export default ({ meal: { mealType, recipesId } }) => {
   const classes = useStyles();
   const icon = getIconMealType(mealType);
+  console.log("recipesId", recipesId);
+  const recipeList = recipes.filter(
+    (recipe) => recipesId && recipesId.indexOf(recipe.id) !== -1
+  );
+  console.log("recipeList", recipeList);
   return (
     <ListItem className={classes.root}>
       <ListItemIcon>
         <Avatar>{icon}</Avatar>
       </ListItemIcon>
-      <ListItemText primary={recipeLabel} secondary={mealType} />
+      {recipeList.map((recipe) => (
+        <ListItemText primary={recipe.name} secondary={mealType} />
+      ))}
       <ListItemSecondaryAction>
         <IconButton>
           <FcInfo />

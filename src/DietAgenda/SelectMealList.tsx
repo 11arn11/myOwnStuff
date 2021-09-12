@@ -4,7 +4,7 @@ import ListItem from "@material-ui/core/ListItem";
 import ListItemText from "@material-ui/core/ListItemText";
 import { FixedSizeList, ListChildComponentProps } from "react-window";
 
-import { recipes } from "../data";
+import { recipes } from "../data/recipes";
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({

@@ -38,7 +38,7 @@ export const scheduledMeals = [
 ];
 
 export const recipes = [
-  { id: 1, name: "Coniglio alla ligure" },
+  { id: 1, name: "Coniglio alla ligure", protein: "", carbohydrate: "", vegetables: ""},
   { id: 2, name: "Spada, pomodori e melanzane" },
   { id: 3, name: "Pasta alla norma" },
   { id: 4, name: "Lasagne alla bolognese" },
@@ -48,4 +48,17 @@ export const recipes = [
   { id: 8, name: "Insalata di farro e salmone" },
   { id: 9, name: "Insalata di farro e salmone" },
   { id: 10, name: "Insalata di farro e salmone" }
+];
+
+export const ingredients = [
+  {id: 1, family:"protein", name: "Chicken"},
+  {id: 2, family:"protein", name: "Atun"},
+  {id: 3, family:"protein", name: "Salmon"},
+  {id: 4, family:"protein", name: "Mozzarella"},
+  {id: 5, family:"protein", name: "Bean"},
+  {id: 6, family:"protein", name: "Rabbit"},
+  {id: 11, family:"carbohydrate", name: "Bread"},
+  {id: 12, family:"carbohydrate", name: "Pasta"},
+  {id: 13, family:"carbohydrate", name: "Rice"},
+  {id: 14, family:"carbohydrate", name: "Potato"},
 ];
